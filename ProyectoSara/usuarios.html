@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--link de Boostrap V5-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+       
+        <!--Link de Style.css-->
+        <link rel="stylesheet" type="text/css" href="css/gestionusuarios.css">
+        
+        <!--google fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Usuarios</title>
+</head>
+<body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html"><img src="img/logo.png" height="55" alt="logo" loading="lazy" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="home.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ventas.html">Ventas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gestionusuarios.html">Admin</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="usuarios.html">Usuarios</a></li>
+                            <li><a class="dropdown-item" href="roles.html">Roles</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="gestionusuarios.html" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            User
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Perfil</a></li>
+                            <li><a class="dropdown-item" href="#">Salir</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Fin Navbar -->
+        
+        
+        <!-- Inicio titulo-->
+        <div class="header">
+            <h1 class="title">Gestión de Usuarios
+                <a class="btn btn-primary" role="button" href="gestionusuarios.html">Regresar</a>
+            </h1>
+            
+        </div>
+        
+        
+        <!-- fin titulo-->
+
+        <!-- Tabla usuarios-->
+
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Usuario</th>
+                    <th scope="col">Rol</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Maria</td>
+                    <td>Usuario</td>
+                    <td>Pediente</td>
+                    <td>
+                        <a class="button-1 mt-2 mt-lg-0" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img src="img/editar.png" height="33" alt="editar" />
+                        <a class="button-1 mt-2 mt-lg-0" role="button" href="#">
+                            <img src="img/eliminar.png" height="28" alt="eliminar" />
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Juan</td>
+                    <td>Vendedor</td>
+                    <td>No autorizado</td>
+                    <td>
+                        <a class="button-1 mt-2 mt-lg-0" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img src="img/editar.png" height="33" alt="editar" />
+                            <a class="button-1 mt-2 mt-lg-0" role="button" href="#">
+                                <img src="img/eliminar.png" height="28" alt="eliminar" />
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+
+                    <td>Ana</td>
+                    <td>Administrador</td>
+                    <td>Autorizado</td>
+                    <td>
+                        <a class="button-1 mt-2 mt-lg-0" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img src="img/editar.png" height="33" alt="editar" />
+                            <a class="button-1 mt-2 mt-lg-0" role="button" href="#">
+                                <img src="img/eliminar.png" height="28" alt="eliminar" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Editar Usuario</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- formulario-->
+                        
+                        
+                        
+                        <form class="row g-4 needs-validation" novalidate>
+                            <div class="col-md-4 position-relative">
+                                <label for="validationTooltip01" class="form-label">Nombre completo</label>
+                                <input type="text" class="form-control" id="validationTooltip01" value="Mark" required>
+                                <div class="valid-tooltip">
+                                    Looks good!
+                                </div>
+                            </div>
+
+
+                        
+                            <div class="col-md-4 position-relative">
+                                <label for="validationTooltip04" class="form-label">Rol</label>
+                                <select class="form-select" id="validationTooltip04" required>
+                                    <option selected disabled value="">Usuario</option>
+                                    <option>Vendedor</option>
+                                    <option>Administrador</option>
+                                </select>
+                                <div class="invalid-tooltip">
+                                    Please select a valid state.
+                                </div>
+                            </div>
+                            <div class="col-md-4 position-relative">
+                                <label for="validationTooltip04" class="form-label">Estado</label>
+                                <select class="form-select" id="validationTooltip04" required>
+                                    <option selected disabled value="">Pediente</option>
+                                    <option>Autorizado</option>
+                                    <option>No Autorizado</option>
+                                </select>
+                                <div class="invalid-tooltip">
+                                    Please select a valid state.
+                                </div>
+                            </div>
+                        </form><br>
+                        
+                        
+                    </div>
+                    <div class="modal-footer" id="liveAlertPlaceholder">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="liveAlertBtn">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin Modal -->
+
+            <!--link de JS-->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+                crossorigin="anonymous"></script>
+            <script src="js/urbanmode.js"></script>
+
+</body>
+</html>
